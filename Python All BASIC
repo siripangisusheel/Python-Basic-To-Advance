@@ -1,0 +1,100 @@
+WHAT IS PYTHON?  
+Python is now one of the most popular and widely used programming, Besides web and software development  .It is an interpreted, object-oriented, high-level programming language.
+
+Comments In Python
+Types:  
+1. Single line comment --- represent with special symbol - # (#)
+Shortcut Key for comment in programming language is (ctrl+forward Arrow)
+2. Multi line comments --- represent with invited quotes with three times-  
+‘‘‘you have to write comments with in this quotes ’’’
+
+Variables in python and its use cases
+Syntax: Var_name = Value  
+Ex: Name = “Suresh” - Str 
+Age = 25 - int 
+Height = 5.7 - Float
+
+{Examples Are Below}!
+Many Values to Multiple Variables 
+x, y, z = "Orange", "Banana", "Cherry" 
+print(x) 
+print(y) 
+print(z) 
+
+One Value to Multiple Variables 
+x = y = z = "Orange" 
+print(x) 
+print(y) 
+print(z) 
+
+Print is a function to print the variable as below
+Output Variables 
+The Python print() function is often used to output variables. 
+x = "Python is awesome" 
+print(x)
+Output:Python is awesome
+
+In the print() function, you output multiple variables, separated by a comma: 
+Example 
+x = "Python" 
+y = "is" 
+z = "awesome" 
+print(x, y, z)
+Output:Python is awesome
+
+Built-in Data Types
+Text Type :str 
+Numeric Types :int, float, complex  
+Sequence Types :list, tuple 
+Mapping Type :dict 
+Set Types :set
+Boolean Type :bool  
+
+{Examples Are Below}!
+Type is a function to print the Type of X as below
+Int: Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length. 
+Print the data type of the variable x: 
+x = 5 
+print(type(x))
+Output:<class 'int'> 
+
+Float:Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
+Example
+x = 1.10, z = -35.59 
+print(type(x)) 
+print(type(z))
+
+Complex: Complex numbers are written with a "j" as the imaginary part: 
+Example 
+x = 3+5j, z = -5j 
+print(type(x)) 
+print(type(z)) 
+
+Type Conversion 
+You can convert from one type to another with the int(), float(), and complex() methods:
+Example 
+#convert from int to float: 
+x = float(1) 
+#convert from float to int: 
+y = int(2.8) 
+#convert from int to complex: 
+z = complex(1) 
+print(x) 
+print(y) 
+print(z)
+ 
+print(type(x)) 
+print(type(y)) 
+print(type(z)) 
+
+Casting 
+If you want to specify the data type of a variable, this can be done with casting. 
+Example 
+x = str(3) 
+y = int(3) 
+z = float(3) 
+print(x) 
+print(y) 
+print(z) 
+
+
