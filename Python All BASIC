@@ -145,7 +145,6 @@ Output:
 {TPC-5}
 String in python
 'hello' is the same as "hello". 
-
 Multiline Strings 
 You can assign a multiline string to a variable by using three quotes: 
 Example 
@@ -155,13 +154,11 @@ consecteturadipiscingelit,
 sed do eiusmodtemporincididunt 
 utlabore et dolore magna aliqua.""" 
 print(a) 
-
 output: 
 Lorem ipsum dolor sit amet, 
 consecteturadipiscingelit, 
 sed do eiusmodtemporincididunt 
 utlabore et dolore magna aliqua. 
-
 Or three single quotes: 
 Example 
 a = '''Lorem ipsum dolor sit amet, 
@@ -170,6 +167,7 @@ sed do eiusmodtemporincididunt
 utlabore et dolore magna aliqua.''' 
 print(a) 
 
+{TPC-6}
 String Length 
 To get the length of a string, use the len() function. 
 Example 
@@ -179,6 +177,7 @@ print(len(a))
 output 
 13 
 
+{TPC-7}
 Check String 
 To check if a certain phrase or character is present in a string, we can use the keyword in. 
 Example 
@@ -187,8 +186,6 @@ txt = "The best things in life are free!"
 print("free" in txt) 
 output 
 True 
-
-
 Use it in an if statement: 
 Example 
 Print only if "free" is present: 
@@ -197,7 +194,6 @@ if "free" in txt:
   print("Yes, 'free' is present.") 
 output 
 Yes, 'free' is present. 
-
 Check if NOT 
 To check if a certain phrase or character is NOT present in a string, we can use the keyword not in. 
 Example 
@@ -205,6 +201,8 @@ Check if "expensive" is NOT present in the following text:
 txt = "The best things in life are free!" 
 print("expensive" not in txt) 
 
+---------------------------[Day-3]------------------------------
+{TPC-1}
 Slicing 
 You can return a range of characters by using the slice syntax. 
 Specify the start index and the end index, separated by a colon, to return a part of the string. 
@@ -217,6 +215,7 @@ llo
 True 
 Note: The first character has index 0. 
 
+{TPC-2}
 Slice From the Start 
 By leaving out the start index, the range will start at the first character: 
 Example 
@@ -226,6 +225,7 @@ print(b[:5])
 output 
 Hello 
 
+{TPC-3}
 Slice To the End 
 By leaving out the end index, the range will go to the end: 
 Example 
@@ -235,6 +235,7 @@ print(b[2:])
 output 
 llo, World!
 
+{TPC-4}
 Negative Indexing 
 Use negative indexes to start the slice from the end of the string: 
 Example 
@@ -244,6 +245,7 @@ To, but not included: "d" in "World!" (position -2):
 b = "Hello, World!" 
 print(b[-5:-2])
 
+{TPC-5}
 Escape Character 
 To insert characters that are illegal in a string, use an escape character. 
 An escape character is a backslash \ followed by the character you want to insert. 
@@ -252,13 +254,13 @@ To fix this problem, use the escape character \":
 Example 
 The escape character allows you to use double quotes when you normally would not be allowed: 
 txt = "We are the so-called \"Vikings\" from the north." 
-
 \' Single Quote 
 \\ Backslash 
 \n New Line 
 \t Tab 
 \b Backspace 
 
+{TPC-6}
 capitalize() Method: 
 The capitalize() method returns a string where the first character is upper case, and the rest is lower case. 
 txt = "python is FUN!" 
@@ -266,6 +268,7 @@ x = txt.capitalize()
 print (x) 
 Output:Python is fun!
 
+{TPC-7}
 casefold() Method: 
 The casefold() method returns a string where all the characters are lower case. 
 txt = "Hello, And Welcome To My World!" 
@@ -273,6 +276,7 @@ x = txt.casefold()
 print(x) 
 Output:hello, and welcome to my world! 
 
+{TPC-8}
 String center() Method: 
 The center() method will center align the string, using a specified character (space is default) as the fill character. 
 Syntax 
@@ -286,6 +290,7 @@ x = txt.center(20)
 print(x) 
       banana 
 
+{TPC-9}
 count() Method: 
 The count() method returns the number of times a specified value appears in the string. 
 Syntax 
@@ -294,7 +299,6 @@ Parameter  Description
 value      Required. A String. The string to value to search for 
 start      Optional. An Integer. The position to start the search. Default is 0 
 end        Optional. An Integer. The position to end the search. Default is the end of the string 
-
 Return the number of times the value "apple" appears in the string: 
 txt = "I love apples, apple are my favorite fruit" 
 x = txt.count("apple") 
@@ -306,6 +310,7 @@ x = txt.count("apple", 10, 24)
 print(x) 
 1 
 
+{TPC-10}
 startswith() Method: 
 the startswith() method returns True if the string starts with the specified value, otherwise False. 
 Syntax 
@@ -314,13 +319,13 @@ Parameter   Description
 value       Required. The value to check if the string starts with 
 start       Optional. An Integer specifying at which position to start the search 
 end         Optional. An Integer specifying at which position to end the search 
-
 Check if the string starts with "Hello": 
 txt = "Hello, welcome to my world." 
 x = txt.startswith("Hello") 
 print(x) 
 True 
 
+{TPC-11}
 endswith() Method: 
 The endswith() method returns True if the string ends with the specified value, otherwise False. 
 Check if the string ends with a punctuation sign (.): 
@@ -332,6 +337,7 @@ txt = "Hello, welcome to my world."
 x = txt.endswith("my world.") 
 print(x) 
 
+{TPC-12}
 String Concatenation 
 To concatenate, or combine, two strings you can use the + operator. 
 Example 
@@ -349,6 +355,7 @@ c = a + " " + b
 print(c) 
 Output:Hello World 
 
+{TPC-13}
 String Format 
 As we learned in the Python Variables chapter, we cannot combine strings and numbers like this: 
 Example 
@@ -378,6 +385,7 @@ myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
 print(myorder.format(quantity, itemno, price)) 
 I want to pay 49.95 dollars for 3 pieces of item 567
 
+{TPC-14}
 Index() Method: 
 The index() method finds the first occurrence of the specified value. 
 The index() method raises an exception if the value is not found. 
@@ -386,6 +394,7 @@ txt = "Hello, welcome to my world."
 x = txt.index("e") 
 print(x) 
 
+{TPC-15}
 isalnum() Method: 
 The isalnum() method returns True if all the characters are alphanumeric, meaning alphabet letter (a-z) and numbers (0-9). 
 Example of characters that are not alphanumeric: (space)!#%&? etc. 
@@ -394,6 +403,7 @@ x = txt.isalnum()
 print(x) 
 True 
 
+{TPC-16}
 isalpha() Method: 
 The isalpha() method returns True if all the characters are alphabet letters (a-z). 
 txt = "CompanyX" 
@@ -401,6 +411,7 @@ x = txt.isalpha()
 print(x) 
 True 
 
+{TPC-17}
 islower() Method: 
 The islower() method returns True if all the characters are in lower case, otherwise False. 
 Numbers, symbols and spaces are not checked, only alphabet characters. 
@@ -408,6 +419,7 @@ txt = "hello world!"
 x = txt.islower() 
 print(x) 
 
+{TPC-18}
 istitle() Method: 
 The istitle() method returns True if all words in a text start with a upper case letter, AND the rest of the word are lower case letters, otherwise False. 
 Symbols and numbers are ignored. 
@@ -419,6 +431,7 @@ x = txt.istitle()
 print(x) 
 True 
 
+{TPC-19}
 strip() Method: 
 Whitespace is the space before and/or after the actual text, and very often you want to remove this space. 
 Example 
@@ -426,6 +439,7 @@ The strip() method removes any whitespace from the beginning or the end:
 a = " Hello, World! " 
 print(a.strip()) # returns "Hello, World!" 
 
+{TPC-20}
 split() Method: 
 The split() method splits a string into a list. 
 You can specify the separator, default separator is any whitespace. 
@@ -435,6 +449,7 @@ The split() method splits the string into substrings if it finds instances o
 a = "Hello, World!" 
 print(a.split(","))   # returns ['Hello', ' World!'] 
 
+{TPC-21}
 swapcase() Method: 
 The swapcase() method returns a string where all the upper case letters are lower case and vice versa. 
 ShapeSyntax 
@@ -444,18 +459,19 @@ x = txt.swapcase()
 print(x) 
 hELLOmYnAMEiS peter 
 
+{TPC-22}
 zfill() Method: 
 The zfill() method adds zeros (0) at the beginning of the string, until it reaches the specified length. 
 If the value of the len parameter is less than the length of the string, no filling is done. 
 Syntax 
 string.zfill(len) 
 
+{TPC-23}
 Fill the string with zeros until it is 10 characters long: 
 txt = "50" 
 x = txt.zfill(10) 
 print(x) 
 0000000050 
-
 a = "hello" 
 b = "welcome to the jungle" 
 c = "10.000" 
@@ -466,6 +482,7 @@ print(c.zfill(10))
 welcome to the jungle 
 000010.000 
 
+{TPC-24}
 Replace String 
 Example 
 The replace() method replaces a string with another string: 
