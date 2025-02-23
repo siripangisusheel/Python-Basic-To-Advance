@@ -1,0 +1,67 @@
+Comments
+1. Single line comment --- represent with special symbol - # 
+2. Multi line comments --- represent with invited quotes with three times- ‘‘‘you have to write comments with in this quotes ’’’ 
+
+Variables 
+Ex: Name = “Suresh” - Str Age = 25 - int Height = 5.7 - Float 
+
+Data Types
+Text Type : 	str
+Numeric Types : 	int, float, complex 
+Sequence Types : 	list, tuple
+Mapping Type : 	dict
+Set Types : 	set, 
+Boolean Type : 	bool 
+x = 1    # int
+y = 2.8  # float
+z =1+9j   # complex
+
+Type Conversion
+x = float(1)  print(x)  print(type(x))  Output:<float>
+
+Implicit Type Conversion in Python
+a=7
+print(type(a))
+b=3.0
+print(type(b))
+c=a+b
+print(c)
+print(type(c))
+# Python automatically converts 
+# d to float as it is a float multiplication
+
+Explicit Type Conversion in Python
+a=5
+# typecast to float
+n=float(a)
+print(n)
+print(type(n))
+
+String in python 
+'hello' is the same as "hello".
+Example
+print("Hello")
+print('Hello')
+
+Multiline Strings
+a = """Lorem ipsum dolor sit amet,
+consecteturadipiscingelit,
+sed do eiusmodtemporincididunt
+utlabore et dolore magna aliqua."""
+print(a)
+
+String Length
+a = "Hello, World!"
+print(len(a))
+
+Check String
+txt = "The best things in life are free!"
+print("free" in txt)
+output
+True
+
+Check if NOT
+txt = "The best things in life are free!"
+print("expensive" not in txt)
+True
+
