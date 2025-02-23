@@ -65,3 +65,167 @@ txt = "The best things in life are free!"
 print("expensive" not in txt)
 True
 
+Slicing
+b = "Hello, World!"
+print(b[2:5])
+output
+llo
+
+Slice From the Start
+b = "Hello, World!"
+print(b[:5])
+output
+Hello
+
+Slice To the End
+b = "Hello, World!"
+print(b[2:])
+output
+llo, World!
+
+Negative Indexing
+b = "Hello, World!"
+print(b[-5:-2])
+
+Python - Escape Characters
+\' txt = "We are the so-called \'Vikings\' from the north." Single Quote
+\\ txt = "We are the so-called \\Vikings\\ from the north." Backslash
+\n txt = "We are the so-called Vikings\n from the north." New Line
+\t txt = "We are the so-called Vikings\t from the north." Tab
+\b txt = "We are the so-called Vikings\b from the north." Backspace
+
+capitalize() Method:
+txt = "python is FUN!"
+x = txt.capitalize()
+print (x)
+
+casefold() Method:
+txt = "Hello, And Welcome To My World!"
+x = txt.casefold()
+print(x)
+hello, and welcome to my world!
+
+String center() Method:
+txt = "banana"
+x = txt.center(20)
+print(x)
+
+      banana
+
+count() Method:
+txt = "I love apples, apple are my favorite fruit"
+x = txt.count("apple")
+print(x)
+2
+
+Search from position 10 to 24:
+txt = "I love apples, apple are my favorite fruit"
+x = txt.count("apple", 10, 24)
+print(x)
+1
+
+startswith() Method:
+Check if the string starts with "Hello":
+txt = "Hello, welcome to my world."
+x = txt.startswith("Hello")
+print(x)
+True
+
+Check if position 7 to 20 starts with the characters "wel":
+txt = "Hello, welcome to my world."
+x = txt.startswith("wel", 7, 20)
+print(x)
+True
+
+endswith() Method:
+txt = "Hello, welcome to my world."
+x = txt.endswith(".")
+print(x)
+
+Check if the string ends with the phrase "my world.":
+txt = "Hello, welcome to my world."
+x = txt.endswith("my world.")
+print(x)
+
+String Concatenation
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+HelloWorld
+
+To add a space between them, add a " ":
+a = "Hello"
+b = "World"
+c = a + " " + b
+print(c)
+Hello World
+
+String Format
+Example
+Use the format() method to insert numbers into strings:
+age = 36	
+txt = "My name is John, and I am {}"
+print(txt.format(age))
+My name is John, and I am 36
+
+Example
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want {} pieces of item {} for {} dollars."
+print(myorder.format(quantity, itemno, price))
+I want 3 pieces of item 567 for 49.95 dollars.
+
+Index() Method:
+txt = "Hello, welcome to my world."
+x = txt.index("e")
+print(x)
+
+isalnum() Method:
+txt = "Company12"
+x = txt.isalnum()
+print(x)
+True
+
+isalpha() Method:
+txt = "CompanyX"
+x = txt.isalpha()
+print(x)
+True
+
+islower() Method:
+txt = "hello world!"
+x = txt.islower()
+print(x)
+
+istitle() Method:
+txt = "Hello, And Welcome To My World!"
+x = txt.istitle()
+print(x)
+True
+
+strip() Method:
+a = " Hello, World! "
+print(a.strip()) # returns "Hello, World!"
+
+a = "Hello, World!"
+print(a.split(","))   # returns ['Hello', ' World!']
+
+swapcase() Method:
+string.swapcase()
+txt = "Hello My Name Is PETER"
+x = txt.swapcase()
+print(x)
+hELLOmYnAMEiS peter
+
+zfill() Method:
+txt = "50"
+x = txt.zfill(10)
+print(x)
+0000000050
+
+Replace String
+a = "Hello, World!"
+print(a.replace("H", "J"))
+Jello, World!
