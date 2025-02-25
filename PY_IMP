@@ -27,8 +27,6 @@ print(type(b))
 c=a+b
 print(c)
 print(type(c))
-# Python automatically converts 
-# d to float as it is a float multiplication
 
 Explicit Type Conversion in Python
 a=5
@@ -93,6 +91,27 @@ Python - Escape Characters
 \n txt = "We are the so-called Vikings\n from the north." New Line
 \t txt = "We are the so-called Vikings\t from the north." Tab
 \b txt = "We are the so-called Vikings\b from the north." Backspace
+
+
+Methods:
+String Concatenation: Combines two or more strings into a single string using the `+` operator or the `join()` method.
+capitalize() Method: Converts the first character of the string to uppercase and the rest to lowercase.
+casefold() Method: Converts all characters of the string to lowercase for case-insensitive comparisons.
+String center() Method: Centers the string within a specified width, padding with spaces or a given character.
+count() Method: Returns the number of occurrences of a substring in the string.
+startswith() Method: Checks if the string starts with a specified substring. Returns `True` or `False`.
+endswith() Method: Checks if the string ends with a specified substring. Returns `True` or `False`.
+format() Method: Allows formatting of strings by embedding variables within placeholders in the string.
+index() Method: Returns the index of the first occurrence of a substring in the string. Raises an error if the substring is not found.
+isalnum() Method: Checks if all characters in the string are alphanumeric (letters and numbers). Returns `True` or `False`.
+isalpha() Method: Checks if all characters in the string are alphabetic. Returns `True` or `False`.
+islower() Method: Checks if all characters in the string are lowercase. Returns `True` or `False`.
+istitle() Method: Checks if the string is in title case, where each word starts with an uppercase letter. Returns `True` or `False`.
+strip() Method: Removes leading and trailing whitespaces (or specified characters) from the string.
+swapcase() Method: Converts all uppercase characters to lowercase and all lowercase characters to uppercase.
+zfill() Method: Pads the string with zeroes on the left to fill a specified width.
+replace() Method: Replaces occurrences of a substring with another substring in the string. 
+
 
 capitalize() Method:
 txt = "python is FUN!"
