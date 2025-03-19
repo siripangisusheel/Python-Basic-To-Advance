@@ -484,33 +484,37 @@ sum(set)   # Returns the sum of all numeric elements in the set
 # Creating sets
 set_a = {1, 2, 3, 4}
 set_b = {3, 4, 5, 6}
+
 # Adding elements
 set_a.add(10)  # {1, 2, 3, 4, 10}
 set_a.update([7, 8])  # {1, 2, 3, 4, 7, 8, 10}
+
 # Removing elements
 set_a.remove(2)  # {1, 3, 4, 7, 8, 10} (Raises KeyError if 2 is not found)
 set_a.discard(100)  # No error even if 100 is not in the set
 popped_item = set_a.pop()  # Removes and returns an arbitrary element
 set_a.clear()  # Empties the set
+
 # Set operations
 set_c = set_a.union(set_b)  # {3, 4, 5, 6}
 set_d = set_a.intersection(set_b)  # {}
 set_e = set_b.difference(set_a)  # {3, 4, 5, 6}
 set_f = set_b.symmetric_difference(set_a)  # {3, 4, 5, 6}
+
 # In-place operations
 set_b.intersection_update({4, 5})  # Keeps only {4, 5} in set_b
 set_b.difference_update({5})  # Removes 5, now set_b = {4}
 set_b.symmetric_difference_update({6, 7})  # Now set_b = {6, 7, 4}
+
 # Subset & Superset Checks
 print({1, 2}.issubset({1, 2, 3}))  # True
 print({1, 2, 3}.issuperset({1, 2}))  # True
 print({1, 2}.isdisjoint({3, 4}))  # True
+
 # Copying a set
 set_copy = set_b.copy()  # Creates a new copy of set_b
+
 # Built-in functions
 print(len(set_b))  # Number of elements in set_b
 print(min(set_b), max(set_b))  # Smallest and largest element in set_b
 print(sum(set_b))  # Sum of all elements in set_b
-
-
-
