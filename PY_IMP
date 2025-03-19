@@ -248,3 +248,269 @@ Replace String
 a = "Hello, World!"
 print(a.replace("H", "J"))
 Jello, World!
+
+Python provides several types of **operators** to perform operations on variables and values. Here’s a complete list:
+------------------------------------------------Types of Operators in Python------------------------------------------------------
+### **1. Arithmetic Operators** (Used for mathematical operations)
+| Operator | Description      | Example (`a=10`, `b=3`) | Result |
+|----------|----------------|-------------------------|--------|
+| `+`      | Addition        | `a + b`                | `13`   |
+| `-`      | Subtraction     | `a - b`                | `7`    |
+| `*`      | Multiplication  | `a * b`                | `30`   |
+| `/`      | Division        | `a / b`                | `3.3333` |
+| `//`     | Floor Division  | `a // b`               | `3`    |
+| `%`      | Modulus (remainder) | `a % b`           | `1`    |
+| `**`     | Exponentiation  | `a ** b`               | `1000` |
+
+---
+
+### **2. Comparison (Relational) Operators** (Returns `True` or `False`)
+| Operator | Description          | Example (`a=10`, `b=3`) | Result |
+|----------|----------------------|-------------------------|--------|
+| `==`     | Equal to              | `a == b`               | `False` |
+| `!=`     | Not equal to          | `a != b`               | `True`  |
+| `>`      | Greater than          | `a > b`                | `True`  |
+| `<`      | Less than             | `a < b`                | `False` |
+| `>=`     | Greater than or equal to | `a >= b`          | `True`  |
+| `<=`     | Less than or equal to    | `a <= b`          | `False` |
+
+---
+
+### **3. Logical Operators** (Used for logical conditions)
+| Operator | Description          | Example (`x=True`, `y=False`) | Result |
+|----------|----------------------|-------------------------------|--------|
+| `and`    | Returns `True` if both conditions are `True` | `x and y` | `False` |
+| `or`     | Returns `True` if at least one condition is `True` | `x or y` | `True` |
+| `not`    | Reverses the boolean value | `not x` | `False` |
+
+---
+
+### **4. Bitwise Operators** (Works at the bit level)
+| Operator | Description | Example (`a=10` → `1010`, `b=3` → `0011`) | Result |
+|----------|------------|--------------------------------|--------|
+| `&` (AND) | Bitwise AND | `a & b` | `0010` (2) |
+| `|` (OR) | Bitwise OR | `a | b` | `1011` (11) |
+| `^` (XOR) | Bitwise XOR | `a ^ b` | `1001` (9) |
+| `~` (NOT) | Bitwise NOT | `~a` | `-11` |
+| `<<` (Left Shift) | Shifts bits left | `a << 2` | `101000` (40) |
+| `>>` (Right Shift) | Shifts bits right | `a >> 2` | `10` (2) |
+
+---
+
+### **5. Assignment Operators** (Used to assign values)
+| Operator | Description | Example (`a = 5`) | Equivalent To |
+|----------|------------|--------------------|---------------|
+| `=`  | Assign | `a = 5` | `a = 5` |
+| `+=` | Add and Assign | `a += 2` | `a = a + 2` |
+| `-=` | Subtract and Assign | `a -= 2` | `a = a - 2` |
+| `*=` | Multiply and Assign | `a *= 2` | `a = a * 2` |
+| `/=` | Divide and Assign | `a /= 2` | `a = a / 2` |
+| `//=` | Floor Divide and Assign | `a //= 2` | `a = a // 2` |
+| `%=` | Modulus and Assign | `a %= 2` | `a = a % 2` |
+| `**=` | Exponentiate and Assign | `a **= 2` | `a = a ** 2` |
+| `&=` | Bitwise AND and Assign | `a &= 2` | `a = a & 2` |
+| `|=` | Bitwise OR and Assign | `a |= 2` | `a = a | 2` |
+| `^=` | Bitwise XOR and Assign | `a ^= 2` | `a = a ^ 2` |
+| `<<=` | Left Shift and Assign | `a <<= 2` | `a = a << 2` |
+| `>>=` | Right Shift and Assign | `a >>= 2` | `a = a >> 2` |
+
+---
+
+### **6. Identity Operators** (Check if two objects reference the same memory location)
+| Operator | Description | Example (`a = [1, 2]`, `b = [1, 2]`, `c = a`) | Result |
+|----------|------------|-------------------------------------------------|--------|
+| `is`    | Returns `True` if both objects are the same | `a is c` | `True` |
+| `is not` | Returns `True` if objects are different | `a is not b` | `True` |
+
+---
+
+### **7. Membership Operators** (Check if a value is in a sequence)
+| Operator | Description | Example (`list1 = [1, 2, 3]`) | Result |
+|----------|------------|-----------------------------|--------|
+| `in`    | Returns `True` if the value is in the sequence | `2 in list1` | `True` |
+| `not in` | Returns `True` if the value is not in the sequence | `5 not in list1` | `True` |
+
+---
+
+### **Example Usage in Python**
+```python
+a = 10
+b = 3
+---------------------------------------------------------# Arithmetic Operators---------------------------------------------
+print(a + b)  # 13
+print(a // b)  # 3
+--------------------------------------------------------# Comparison Operators-----------------------------------------------
+print(a > b)  # True
+--------------------------------------------------------# Logical Operators--------------------------------------------------
+print(a > 5 and b < 5)  # True
+--------------------------------------------------------# Assignment Operators-----------------------------------------------
+a += 2
+print(a)  # 12
+--------------------------------------------------------# Identity Operators-------------------------------------------------
+x = [1, 2]
+y = [1, 2]
+z = x
+print(x is z)  # True
+print(x is not y)  # True
+--------------------------------------------------------# Membership Operators-----------------------------------------------
+print(2 in x)  # True
+print(5 not in x)  # True
+```
+---------------------------------------------------------Arrays/Data-Types---------------------------------------------------
+----------------------{LIST-Methods}-------------------------------------
+list.append(item)        # Adds an item to the end of the list  
+list.extend(iterable)    # Adds multiple items from an iterable to the end of the list  
+list.insert(index, item) # Inserts an item at a specific index  
+list.remove(item)        # Removes the first occurrence of an item  
+list.pop(index)         # Removes and returns an item at the given index (default: last item)  
+list.clear()            # Removes all elements from the list  
+list.index(item, start, end)  # Returns the index of the first occurrence of an item  
+list.count(item)        # Returns the number of times an item appears in the list  
+list.sort(reverse=False, key=function)  # Sorts the list (ascending by default)  
+list.reverse()         # Reverses the order of the list  
+list.copy()            # Returns a shallow copy of the list  
+
+-------------------------List---------------------------------------
+# Creating a List
+my_list = [1, 2, 3, "apple", True]
+
+# Accessing Elements
+print(my_list[0])    # 1
+print(my_list[-1])   # True
+
+# Modifying Elements
+my_list[1] = "banana"
+
+# Adding Elements
+my_list.append(4)       # Adds at the end
+my_list.insert(2, "grape")  # Inserts at index 2
+my_list.extend([5, 6, 7])   # Adds multiple elements
+
+# Removing Elements
+my_list.remove("apple")  # Removes first occurrence
+popped = my_list.pop()   # Removes last item
+my_list.clear()          # Removes all elements
+
+# Searching in List
+index = my_list.index("banana")  # Gets index of "banana"
+count = my_list.count(1)         # Counts occurrences of 1
+
+# Sorting & Reversing
+nums = [4, 2, 8, 1]
+nums.sort()            # [1, 2, 4, 8] (Ascending)
+nums.sort(reverse=True) # [8, 4, 2, 1] (Descending)
+nums.reverse()         # [1, 2, 4, 8] (Reversed list)
+
+# Copying a List
+new_list = nums.copy()  
+
+# Looping Through a List
+for item in my_list:
+    print(item)
+
+# List Comprehension
+squared = [x**2 for x in [1, 2, 3, 4, 5]]  # [1, 4, 9, 16, 25]
+
+# Slicing a List
+print(nums[1:3])   # [2, 4] (From index 1 to 2)
+print(nums[::-1])  # [8, 4, 2, 1] (Reversed)
+
+# Membership Check
+if "banana" in my_list:
+    print("Found")
+
+# List Operations
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+print(list1 + list2)  # [1, 2, 3, 4, 5, 6] (Concatenation)
+print(list1 * 2)      # [1, 2, 3, 1, 2, 3] (Repetition)
+
+# Built-in Functions
+print(len(my_list))  # Length of list
+print(max(nums))     # Maximum value
+print(min(nums))     # Minimum value
+print(sum(nums))     # Sum of elements
+
+
+-------------------------{Tuple-Methods}---------------------------------------
+tuple.count(item)   # Returns the number of times an item appears in the tuple  
+tuple.index(item, start, end)  # Returns the index of the first occurrence of an item  
+len(tuple)   # Returns the number of elements in the tuple  
+max(tuple)   # Returns the largest element in the tuple  
+min(tuple)   # Returns the smallest element in the tuple  
+sum(tuple)   # Returns the sum of all numeric elements in the tuple  
+
+-------------------------Tuple---------------------------------------
+t = (1, 2, 3, 4, 2)
+print(t.count(2))  # Output: 2
+print(t.index(3))  # Output: 2
+# Convert tuple to list, modify, and convert back
+t_list = list(t)
+t_list.append(5)
+t = tuple(t_list)
+print(t)  # Output: (1, 2, 3, 4, 2, 5)
+
+-------------------------{Sets-Methods}---------------------------------------
+# Adding Elements
+set.add(item)         # Adds a single item to the set  
+set.update(iterable)  # Adds multiple items from an iterable to the set  
+# Removing Elements
+set.remove(item)      # Removes the item; raises KeyError if not found  
+set.discard(item)     # Removes the item; does NOT raise an error if not found  
+set.pop()            # Removes and returns an arbitrary item from the set  
+set.clear()          # Removes all elements from the set  
+# Set Operations
+set.union(other_set)        # Returns a new set containing all unique elements  
+set.intersection(other_set) # Returns a new set with elements common to both sets  
+set.difference(other_set)   # Returns a new set with elements in this set but not in the other  
+set.symmetric_difference(other_set) # Returns a new set with elements in either set, but not both  
+# In-Place Set Operations
+set.intersection_update(other_set)  # Keeps only elements found in both sets  
+set.difference_update(other_set)    # Removes elements found in the other set  
+set.symmetric_difference_update(other_set)  # Keeps only elements unique to each set  
+set.update(other_set)  # Adds elements from another set  
+# Subset & Superset Checks
+set.issubset(other_set)  # Returns True if all elements are in the other set  
+set.issuperset(other_set)  # Returns True if all elements of the other set are in this set  
+set.isdisjoint(other_set)  # Returns True if the sets have no elements in common  
+# Copying
+set.copy()  # Returns a shallow copy of the set  
+len(set)   # Returns the number of elements in the set  
+max(set)   # Returns the largest element in the set (if numeric)  
+min(set)   # Returns the smallest element in the set (if numeric)  
+sum(set)   # Returns the sum of all numeric elements in the set  
+
+-------------------------sets---------------------------------------
+# Creating sets
+set_a = {1, 2, 3, 4}
+set_b = {3, 4, 5, 6}
+# Adding elements
+set_a.add(10)  # {1, 2, 3, 4, 10}
+set_a.update([7, 8])  # {1, 2, 3, 4, 7, 8, 10}
+# Removing elements
+set_a.remove(2)  # {1, 3, 4, 7, 8, 10} (Raises KeyError if 2 is not found)
+set_a.discard(100)  # No error even if 100 is not in the set
+popped_item = set_a.pop()  # Removes and returns an arbitrary element
+set_a.clear()  # Empties the set
+# Set operations
+set_c = set_a.union(set_b)  # {3, 4, 5, 6}
+set_d = set_a.intersection(set_b)  # {}
+set_e = set_b.difference(set_a)  # {3, 4, 5, 6}
+set_f = set_b.symmetric_difference(set_a)  # {3, 4, 5, 6}
+# In-place operations
+set_b.intersection_update({4, 5})  # Keeps only {4, 5} in set_b
+set_b.difference_update({5})  # Removes 5, now set_b = {4}
+set_b.symmetric_difference_update({6, 7})  # Now set_b = {6, 7, 4}
+# Subset & Superset Checks
+print({1, 2}.issubset({1, 2, 3}))  # True
+print({1, 2, 3}.issuperset({1, 2}))  # True
+print({1, 2}.isdisjoint({3, 4}))  # True
+# Copying a set
+set_copy = set_b.copy()  # Creates a new copy of set_b
+# Built-in functions
+print(len(set_b))  # Number of elements in set_b
+print(min(set_b), max(set_b))  # Smallest and largest element in set_b
+print(sum(set_b))  # Sum of all elements in set_b
+
+
+
