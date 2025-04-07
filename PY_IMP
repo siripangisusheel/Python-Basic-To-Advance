@@ -593,3 +593,234 @@ if "age" in my_dict:
 # Built-in Functions
 print(len(my_dict))       # Number of items in dictionary
 print(list(my_dict))      # Converts keys to a list
+
+
+----------------------{IF-Statements Syntax}-------------------------------------
+if condition:                  
+    # block of code executed if condition is True
+
+elif another_condition:        
+    # block of code executed if the elif condition is True
+
+else:                          
+    # block of code executed if all above conditions are False
+
+# Conditions can use comparison operators:
+==  # Equal to  
+!=  # Not equal to  
+>   # Greater than  
+<   # Less than  
+>=  # Greater than or equal to  
+<=  # Less than or equal to  
+
+# Logical operators:
+and     # Both conditions must be True  
+or      # At least one condition must be True  
+not     # Reverses the condition (True becomes False and vice versa)
+
+-------------------------IF Statements Examples---------------------------------------
+
+# Basic If Statement
+x = 10
+if x > 5:
+    print("x is greater than 5")   # Output: x is greater than 5
+
+# If-Else Statement
+age = 18
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")
+
+# If-Elif-Else Ladder
+marks = 85
+if marks >= 90:
+    print("Grade: A")
+elif marks >= 75:
+    print("Grade: B")
+elif marks >= 60:
+    print("Grade: C")
+else:
+    print("Grade: D")
+
+# Nested If Statements
+number = 15
+if number > 10:
+    if number < 20:
+        print("Number is between 10 and 20")
+
+# Using Logical Operators
+a = 5
+b = 10
+if a < 10 and b > 5:
+    print("Both conditions are True")
+
+# Using not
+is_raining = False
+if not is_raining:
+    print("You can go outside!")
+
+# Short-hand If
+x = 7
+if x > 5: print("x is greater than 5")  # Output: x is greater than 5
+
+# Short-hand If-Else (Ternary)
+x = 10
+print("Even" if x % 2 == 0 else "Odd")  # Output: Even
+
+# Membership in If
+fruits = ["apple", "banana", "cherry"]
+if "banana" in fruits:
+    print("Banana is in the list")
+
+# Identity in If
+a = [1, 2, 3]
+b = a
+if a is b:
+    print("a and b refer to the same object")
+
+----------------------{WHILE-Loop Syntax}-------------------------------------
+while condition:
+    # block of code that runs while the condition is True
+
+else:
+    # optional block that runs once when the condition becomes False
+-------------------------WHILE Loop Examples---------------------------------------
+
+# Basic While Loop
+count = 1
+while count <= 5:
+    print("Count:", count)
+    count += 1
+# Output: Count: 1 ... Count: 5
+
+# While with Else
+x = 3
+while x > 0:
+    print(x)
+    x -= 1
+else:
+    print("Loop finished")  # Runs when while condition is False
+
+# Infinite Loop (Be careful!)
+# while True:
+#     print("This runs forever unless you break")
+
+# Using break to exit loop early
+i = 1
+while i <= 5:
+    if i == 3:
+        break
+    print(i)
+    i += 1
+# Output: 1, 2
+
+# Using continue to skip an iteration
+i = 0
+while i < 5:
+    i += 1
+    if i == 3:
+        continue
+    print(i)
+# Output: 1, 2, 4, 5
+
+# Looping through a list manually
+fruits = ["apple", "banana", "cherry"]
+index = 0
+while index < len(fruits):
+    print(fruits[index])
+    index += 1
+
+# Countdown Timer
+import time
+count = 5
+while count > 0:
+    print(count)
+    time.sleep(1)  # Wait for 1 second
+    count -= 1
+print("Time's up!")
+
+# Nested While Loops
+i = 1
+while i <= 2:
+    j = 1
+    while j <= 2:
+        print(f"i={i}, j={j}")
+        j += 1
+    i += 1
+----------------------{FOR-Loop Syntax}-------------------------------------
+for variable in iterable:
+    # block of code to execute for each item in the iterable
+
+else:
+    # optional block that runs after the loop completes (if not broken)
+-------------------------FOR Loop Examples---------------------------------------
+
+# Looping Through a List
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+# Looping Through a String
+for char in "Python":
+    print(char)
+
+# Looping with range()
+for i in range(5):
+    print(i)  # 0 to 4
+
+for i in range(1, 6):
+    print(i)  # 1 to 5
+
+for i in range(10, 0, -2):
+    print(i)  # 10, 8, 6, 4, 2
+
+# Using else with for
+for i in range(3):
+    print(i)
+else:
+    print("Loop completed!")
+
+# Using break in a for loop
+for i in range(5):
+    if i == 3:
+        break
+    print(i)
+
+# Using continue in a for loop
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+
+# Nested For Loops
+for i in range(1, 3):
+    for j in range(1, 4):
+        print(f"i={i}, j={j}")
+
+# Looping through a dictionary
+my_dict = {"name": "Alice", "age": 25}
+for key in my_dict:
+    print(key, ":", my_dict[key])
+
+# Looping through dictionary items
+for key, value in my_dict.items():
+    print(f"{key} => {value}")
+
+# Looping with index using enumerate()
+colors = ["red", "green", "blue"]
+for index, color in enumerate(colors):
+    print(index, color)
+
+# List Comprehension (short for-loop syntax)
+squares = [x**2 for x in range(5)]  # [0, 1, 4, 9, 16]
+
+# Looping through a set
+my_set = {1, 2, 3}
+for item in my_set:
+    print(item)
+
+# Looping through a tuple
+my_tuple = ("a", "b", "c")
+for item in my_tuple:
+    print(item)
