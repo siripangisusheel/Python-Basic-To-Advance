@@ -518,3 +518,78 @@ set_copy = set_b.copy()  # Creates a new copy of set_b
 print(len(set_b))  # Number of elements in set_b
 print(min(set_b), max(set_b))  # Smallest and largest element in set_b
 print(sum(set_b))  # Sum of all elements in set_b
+
+
+----------------------{DICT-Methods}-------------------------------------
+dict[key] = value        # Adds or updates a key-value pair  
+dict.get(key, default)   # Returns the value for key, or default if key not found  
+dict.keys()              # Returns a view of all keys in the dictionary  
+dict.values()            # Returns a view of all values in the dictionary  
+dict.items()             # Returns a view of key-value pairs (tuples)  
+dict.pop(key)            # Removes the item with the specified key and returns its value  
+dict.popitem()           # Removes and returns the last inserted key-value pair  
+dict.update(other_dict)  # Updates dictionary with key-value pairs from another dictionary  
+dict.clear()             # Removes all items from the dictionary  
+dict.copy()              # Returns a shallow copy of the dictionary  
+
+-------------------------Dictionary---------------------------------------
+# Creating a Dictionary
+my_dict = {
+    "name": "Alice",
+    "age": 25,
+    "is_student": True,
+    "courses": ["Math", "Science"]
+}
+
+# Accessing Elements
+print(my_dict["name"])        # Alice
+print(my_dict.get("age"))     # 25
+print(my_dict.get("grade", "N/A"))  # N/A (default if key not found)
+
+# Modifying Elements
+my_dict["age"] = 26
+
+# Adding New Elements
+my_dict["grade"] = "A"
+
+# Removing Elements
+my_dict.pop("is_student")    # Removes and returns value for 'is_student'
+my_dict.popitem()            # Removes the last inserted item
+del my_dict["name"]          # Deletes 'name' key-value pair
+
+# Dictionary Views
+keys = my_dict.keys()        # dict_keys(['age', 'courses'])
+values = my_dict.values()    # dict_values([26, ['Math', 'Science']])
+items = my_dict.items()      # dict_items([('age', 26), ('courses', ['Math', 'Science'])])
+
+# Updating Dictionary
+my_dict.update({"age": 27, "city": "New York"})
+
+# Copying a Dictionary
+new_dict = my_dict.copy()
+
+# Looping Through a Dictionary
+for key in my_dict:
+    print(key, ":", my_dict[key])
+
+for key, value in my_dict.items():
+    print(f"{key} => {value}")
+
+# Nested Dictionary
+students = {
+    "student1": {"name": "John", "age": 20},
+    "student2": {"name": "Emma", "age": 22}
+}
+
+print(students["student1"]["name"])  # John
+
+# Dictionary Comprehension
+squares = {x: x**2 for x in range(5)}  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+# Membership Check
+if "age" in my_dict:
+    print("Key 'age' found!")
+
+# Built-in Functions
+print(len(my_dict))       # Number of items in dictionary
+print(list(my_dict))      # Converts keys to a list
