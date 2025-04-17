@@ -93,11 +93,11 @@ Python - Escape Characters
 \b txt = "We are the so-called Vikings\b from the north." Backspace
 
 
-Methods:
+Functions:
 String Concatenation: Combines two or more strings into a single string using the `+` operator or the `join()` method.
 capitalize() Method: Converts the first character of the string to uppercase and the rest to lowercase.
 casefold() Method: Converts all characters of the string to lowercase for case-insensitive comparisons.
-String center() Method: Centers the string within a specified width, padding with spaces or a given character.
+center() Method: Centers the string within a specified width, padding with spaces or a given character.
 count() Method: Returns the number of occurrences of a substring in the string.
 startswith() Method: Checks if the string starts with a specified substring. Returns `True` or `False`.
 endswith() Method: Checks if the string ends with a specified substring. Returns `True` or `False`.
