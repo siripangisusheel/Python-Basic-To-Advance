@@ -380,6 +380,13 @@ There are four collection data types in the Python programming language:
 *Set items are unchangeable, but you can remove and/or add items whenever you like.
 
 -------------------------List---------------------------------------
+List ([])
+Ordered, mutable, allows duplicates
+Use when:
+You need to maintain order.
+You expect to add, remove, or change elements.
+You want to store a sequence of items (like a to-do list or a list of user inputs).
+
 # Creating a List
 my_list = [1, 2, 3, "apple", True]
 
@@ -442,6 +449,13 @@ print(sum(nums))     # Sum of elements
 
 
 -------------------------{Tuple-Methods}---------------------------------------
+Tuple (())
+Ordered, immutable, allows duplicates
+Use when:
+You need a fixed, read-only collection of items.
+You want to ensure data integrity.
+You use it as a key in a dictionary (only hashable types can be keys).
+
 tuple.count(item)   # Returns the number of times an item appears in the tuple  
 tuple.index(item, start, end)  # Returns the index of the first occurrence of an item  
 len(tuple)   # Returns the number of elements in the tuple  
@@ -460,6 +474,12 @@ t = tuple(t_list)
 print(t)  # Output: (1, 2, 3, 4, 2, 5)
 
 -------------------------{Sets-Methods}---------------------------------------
+Set ({} or set())
+Unordered, mutable, no duplicates
+Use when:
+You need to store unique values.
+You need to perform fast set operations like union, intersection, difference.
+
 # Adding Elements
 set.add(item)         # Adds a single item to the set  
 set.update(iterable)  # Adds multiple items from an iterable to the set  
@@ -530,6 +550,12 @@ print(sum(set_b))  # Sum of all elements in set_b
 
 
 ----------------------{DICT-Methods}-------------------------------------
+Dictionary ({key: value})
+Unordered (ordered as of Python 3.7+), mutable, keys are unique
+Use when:
+You need a mapping from unique keys to values.
+You need fast lookup based on a key.
+
 dict[key] = value        # Adds or updates a key-value pair  
 dict.get(key, default)   # Returns the value for key, or default if key not found  
 dict.keys()              # Returns a view of all keys in the dictionary  
@@ -833,3 +859,30 @@ for item in my_set:
 my_tuple = ("a", "b", "c")
 for item in my_tuple:
     print(item)
+
+
+----------------------------------------{In-Built-Functions}----------------------
+| Function                               | Purpose                                 | Example                        |
+| -------------------------------------- | --------------------------------------- | ------------------------------ |
+| `print()`                              | Output to console                       | `print("Hello")`               |
+| `input()`                              | Take input from user                    | `name = input("Enter name: ")` |
+| `len()`                                | Get length of a collection              | `len([1, 2, 3])`               |
+| `type()`                               | Return type of object                   | `type(42)`                     |
+| `int()`, `float()`, `str()`            | Convert between types                   | `int("5")`, `str(3.14)`        |
+| `list()`, `tuple()`, `set()`, `dict()` | Create collection types                 | `list("abc")`                  |
+| `range()`                              | Create a range of numbers               | `range(1, 10)`                 |
+| `sum()`                                | Sum of items in iterable                | `sum([1, 2, 3])`               |
+| `min()`, `max()`                       | Find min or max in iterable             | `max([4, 7, 2])`               |
+| `sorted()`                             | Return sorted version of iterable       | `sorted([3, 1, 2])`            |
+| `reversed()`                           | Return reversed iterator                | `reversed([1, 2, 3])`          |
+| `enumerate()`                          | Iterate with index                      | `for i, v in enumerate(list)`  |
+| `zip()`                                | Combine iterables into tuples           | `zip(list1, list2)`            |
+| `map()`                                | Apply function to all items in iterable | `map(str, [1, 2, 3])`          |
+| `filter()`                             | Filter items using a function           | `filter(is_even, nums)`        |
+| `any()`, `all()`                       | Check if any/all elements are True      | `all([True, True, False])`     |
+| `abs()`                                | Absolute value                          | `abs(-5)`                      |
+| `round()`                              | Round number                            | `round(3.14159, 2)`            |
+| `eval()`                               | Evaluate Python expression from string  | `eval("3 + 4")`                |
+| `id()`                                 | Get memory address of object            | `id(x)`                        |
+| `isinstance()`                         | Check type of variable                  | `isinstance(5, int)`           |
+| `help()`                               | Show help/documentation                 | `help(str)`                    |
