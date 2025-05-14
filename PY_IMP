@@ -886,3 +886,15 @@ for item in my_tuple:
 | `id()`                                 | Get memory address of object            | `id(x)`                        |
 | `isinstance()`                         | Check type of variable                  | `isinstance(5, int)`           |
 | `help()`                               | Show help/documentation                 | `help(str)`                    |
+
+
+--------------------------------------------------------------------------User-Defined-Functions-----------------------------------
+In Python a function is defined using the def keyword:
+Example
+def my_function(): 
+    print("Hello from a function")
+
+Calling a Function
+To call a function, use the function name followed by parenthesis:
+Example
+def my_function():
