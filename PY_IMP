@@ -381,7 +381,7 @@ There are four collection data types in the Python programming language:
 
 -------------------------List---------------------------------------
 List ([])
-Ordered, mutable, allows duplicates
+Ordered, changeable, allows duplicates
 Use when:
 You need to maintain order.
 You expect to add, remove, or change elements.
@@ -450,7 +450,7 @@ print(sum(nums))     # Sum of elements
 
 -------------------------{Tuple-Methods}---------------------------------------
 Tuple (())
-Ordered, immutable, allows duplicates
+Ordered, non-changeable, allows duplicates
 Use when:
 You need a fixed, read-only collection of items.
 You want to ensure data integrity.
@@ -475,7 +475,7 @@ print(t)  # Output: (1, 2, 3, 4, 2, 5)
 
 -------------------------{Sets-Methods}---------------------------------------
 Set ({} or set())
-Unordered, mutable, no duplicates
+Unordered, changeable, no duplicates
 Use when:
 You need to store unique values.
 You need to perform fast set operations like union, intersection, difference.
@@ -551,7 +551,7 @@ print(sum(set_b))  # Sum of all elements in set_b
 
 ----------------------{DICT-Methods}-------------------------------------
 Dictionary ({key: value})
-Unordered (ordered as of Python 3.7+), mutable, keys are unique
+Unordered (ordered as of Python 3.7+), changeable, keys are unique
 Use when:
 You need a mapping from unique keys to values.
 You need fast lookup based on a key.
